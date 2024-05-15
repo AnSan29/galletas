@@ -11,12 +11,16 @@
   margin: 0;
   padding: 0;
 }
+body {
+  margin: 0;
+  padding: 0;
+}
 .Background {
   background-image: linear-gradient(
-    to bottom right,
+    to bottom,
     #fcf4f1 0%,
-    #fcf4f1 55%,
-    #ffb6a8 55%,
+    #fcf4f1 80%,
+    #ffb6a8 80%,
     #f29191 100%
   );
   background-size: cover;
@@ -84,7 +88,93 @@ i:hover {
 .lista_orden:hover {
   transform: scale(1.1);
 }
+main {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+}
+.section {
+  text-align: center;
+}
+.name {
+  text-align: center;
+  padding-top: 3rem;
+  font-family: Cormorant;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+.nosotros {
+  font-size: 3rem;
+  font-weight: bolder;
+  text-align: start;
+  padding: 20px;
+}
+.info {
+  text-align: justify;
+  width: 800px;
+  padding: 10px;
+}
 
+.img_decoration {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: #222;
+  top: 80%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+}
+.card {
+  position: absolute;
+  width: 280px;
+  height: 430px;
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+  left: 75%;
+  top: 45%;
+  transform: translate(-50%, -50%);
+}
+
+.imagenperfil {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  top: 20px;
+  border: 1px solid #474747;
+}
+
+.name_person {
+  margin-top: 80px;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-align: center;
+  z-index: 2;
+  color: #474747;
+}
+
+.title {
+  margin-top: 10px;
+  color: #7a7a7a;
+  font-size: 1rem;
+  font-weight: bolder;
+  text-align: center;
+  z-index: 2;
+}
+
+p {
+  top: 0;
+  text-align: center;
+  padding: 0px 20px;
+  color: #7a7a7a;
+  font-size: 1rem;
+}
 footer {
   position: absolute;
   top: 98%;
@@ -92,64 +182,4 @@ footer {
   transform: translate(-50%, -50%);
   font-size: 0.9rem;
   color: #222;
-}
-
-.text {
-  position: absolute;
-  top: 45%;
-  left: 20%;
-  transform: translate(-50%, -50%);
-  font-size: 5rem;
-  color: #222;
-  display: flex;
-}
-.word1 {
-  font-weight: 400;
-  color: #000000;
-}
-
-.word2 {
-  font-weight: bold;
-  background: linear-gradient(to top, #f29191, #fce9e2);
-  background-clip: text;
-  color: transparent;
-}
-.info {
-  width: 400px;
-  font-family: Dancing Script;
-  position: absolute;
-  top: 70%;
-  left: 21%;
-  transform: translate(-50%, -50%);
-  text-align: justify;
-}
-.info_text {
-  font-family: Dancing Script;
-  font-size: 1.3rem;
-}
-
-.decoration {
-  position: absolute;
-  width: 120px;
-  height: 12px;
-  background-color: #f29191;
-  top: 20%;
-  left: 86%;
-  box-shadow: 1px 1px 5px #00000020;
-}
-.decoration1 {
-  position: absolute;
-  width: 300px;
-  height: 1px;
-  background-color: #ffffff;
-  top: 75%;
-  left: 90%;
-  transform: rotate(90deg);
-}
-.logo {
-  position: absolute;
-  width: 150px;
-  height: 120px;
-  background-color: #000000;
-  left: 7%;
 }
