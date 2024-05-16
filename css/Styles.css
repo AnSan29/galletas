@@ -64,6 +64,7 @@
   color: #f29191;
   font-size: 1.5rem;
   font-weight: bold;
+  z-index: 999;
 }
 
 .lista_orden:last-child .lista_link:hover {
