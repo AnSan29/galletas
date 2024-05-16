@@ -1,16 +1,12 @@
-import hamburgerMenu from "./menu-hamburguesa.js";
-import {eliminarItemCarrito, actualizarTotalCarrito, ocultarCarrito } from "./app.js";
-import ready from "./app.js";
+let contadorCarrito = 0;
 
-const d = document;
+function agregarAlCarrito() {
+  contadorCarrito++;
+  console.log("Contador actualizado:", contadorCarrito);
+  actualizarContadorCarrito();
+}
 
-d.addEventListener("DOMContentLoaded", (e) => {
-    hamburgerMenu(".panel-btn", ".panel");
-});
-
-ready();
-eliminarItemCarrito();
-actualizarTotalCarrito();
-ocultarCarrito();
-
-
+function actualizarContadorCarrito() {
+  const contadorElemento = document.getElementById("carrito-contador");
+  contadorElemento.innerHTML = `<a class="lista_link" href="/html/Principal/Carrito/index.html"> <i class="fas fa-shopping-cart"></i><span class="contador">${contadorCarrito}</span></a>`;
+}
