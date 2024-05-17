@@ -100,7 +100,7 @@ main {
 .name {
   text-align: center;
   padding-top: 3rem;
-  font-family: Cormorant;
+  font-family: "Open Sans";
   font-size: 2rem;
   font-weight: bolder;
 }
@@ -199,6 +199,7 @@ footer {
   top: 90%;
   left: 90%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 .button2 > svg {

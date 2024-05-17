@@ -154,6 +154,7 @@ a {
   top: 90%;
   left: 90%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 .button2 > svg {

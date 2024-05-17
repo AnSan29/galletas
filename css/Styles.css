@@ -119,8 +119,6 @@ footer {
   height: 250px; /* Set a fixed height */
 }
 
-
-
 .item:hover {
   transform: scale(1.03);
   height: auto;
@@ -148,7 +146,6 @@ footer {
   margin: 0.5rem 0;
   font-weight: bold;
 }
-
 
 .boton-item {
   background: linear-gradient(135deg, #f29191, #ffb6a8);
@@ -190,6 +187,7 @@ footer {
   top: 90%;
   left: 90%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 .button2 > svg {
@@ -250,4 +248,3 @@ footer {
   background-color: #009087;
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
-
