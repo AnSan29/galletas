@@ -16,7 +16,7 @@
   margin: 0;
   padding: 0;
 }
-.Background {
+body {
   background-image: linear-gradient(
     to bottom,
     #fcf4f1 40%,
@@ -26,23 +26,29 @@
   background-position: center;
   height: 200vh;
 }
+#header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--secondary-color);
+  z-index: 100;
+  padding: 10px 0;
+}
 
 .logo {
   position: absolute;
   max-width: 15%;
   height: auto;
   top: 0;
-}
-
-.header {
-  display: flex;
-  width: 100%;
+  z-index: 101;
 }
 
 .nav {
   width: 100%;
   display: flex;
   justify-content: space-around;
+  position: relative;
 }
 .lista {
   margin-top: 10px;
@@ -84,35 +90,39 @@ i:hover {
 }
 
 footer {
-  position: absolute;
+  width: 100%;
+  background-color: var(--main-color);
+  position: fixed;
+  bottom: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   font-size: 0.9rem;
   color: #222;
+  text-align: center;
+  padding: 10px 0;
 }
-
 .carousel {
   display: relative;
   width: 60%;
   height: 60vh;
   cursor: pointer;
-  border-radius: 50px;
   margin: auto;
-  margin-top: 70px;
+  margin-top: 8%;
+  border-radius: 50px;
   overflow: hidden;
 }
 .carousel-images {
   display: flex;
+  width: 200%;
+  height: 100%;
   transition: transform 1s ease-in-out;
+  border-radius: 50px;
 }
 
 .carousel-image {
-  position: absolute;
   width: 60%;
   height: 60vh;
-  opacity: 1;
   border-radius: 50px;
-  transition: opacity 1s ease-in-out;
 }
 
 .contenedor-items {
@@ -122,7 +132,7 @@ footer {
   padding: 1rem;
   max-width: 120rem;
   width: 60%;
-  margin: 100px auto;
+  margin: 150px auto;
   overflow: hidden;
 }
 
@@ -268,3 +278,18 @@ footer {
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
+body::-webkit-scrollbar {
+  width: 20px; /* Ancho de la barra de desplazamiento */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(
+    --secondary-color
+  ); /* Color de fondo de la barra de desplazamiento */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #ff69b4; /* Color del pulgar de la barra de desplazamiento (rosa) */
+  border-radius: 10px; /* Bordes redondeados */
+  border: 2px solid var(--secondary-color); /* Borde del pulgar de la barra de desplazamiento (rosa) */
+}

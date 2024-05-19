@@ -26,23 +26,18 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.querySelector(".dropbtn").addEventListener("click", toggleMenu);
-function toggleMenu() {
-  var menu = document.getElementById("menu");
-  if (menu.style.display === "none") {
-    menu.style.display = "block";
-  } else {
-    menu.style.display = "none";
-  }
-}
-
+//Funcion Para Dezlisar//
 document.addEventListener("DOMContentLoaded", () => {
-  const carouselImages = document.querySelector(".carousel-images");
+  const imagesContainer = document.querySelector(".carousel-images");
   const images = document.querySelectorAll(".carousel-image");
-  let current = 0;
+  let currentIndex = 0;
 
-  setInterval(() => {
-    current = (current + 1) % images.length;
-    carouselImages.style.transform = `translateX(-${current * 100}%)`;
-  }, 1000);
+  function showNextImage() {
+    images[currentIndex].classList.remove("active");
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add("active");
+    imagesContainer.style.transform = `translateX(-${currentIndex * 1150}px)`;
+  }
+
+  setInterval(showNextImage, 5000);
 });
