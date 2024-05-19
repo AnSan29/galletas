@@ -38,6 +38,9 @@ body {
   z-index: 100;
   padding: 15px 0;
 }
+.dropbtn {
+  display: none;
+}
 
 .nav {
   width: 100%;

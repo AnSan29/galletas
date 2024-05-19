@@ -17,15 +17,14 @@
 <body>
     <!-- header donde esta el titulo -->
 
-    <header id="header">
-        <nav class="nav">
+    <header id="header" class="dropdown">
+        <button class="dropbtn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+        <nav class="nav" id="menu">
             <ul class="lista">
-                <li class="lista_orden"><a class="lista_link" href="/html/Principal/index.html">INICIO</a></li>
-                <li class="lista_orden"><a class="lista_link"
-                        href="/html/Principal/Productos/Productos.html">PRODUCTOS</a></li>
+                <li class="lista_orden"><a class="lista_link" href="/html/Principal/Inicio/Inicio.html">INICIO</a></li>
                 <li class="lista_orden"><a class="lista_link" href="/html/Principal/Nosotros/Nosotros.html">NOSOTROS</a>
                 </li>
-                <li class="lista_orden"><a class="lista_link" href="/html/Principal/Carrito/Carrito.html"> <i
+                <li class="lista_orden"><a class="lista_link" href="/html/Principal/Carrito/Carrito.html"><i
                             class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </nav>
@@ -35,7 +34,7 @@
     <div class="carrito">
         <h1>Carrito</h1>
         <p class="carrito_text">Su carrito actualmente está vacío.</p>
-        <button class="contactButton" onclick="location.href='/html/Principal/Productos/Productos.html'">
+        <button class="contactButton" onclick="location.href='/html/Principal/inicio/inicio.html'">
             CONTINUAR CON LA COMPRA
             <div class="iconButton">
                 <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
