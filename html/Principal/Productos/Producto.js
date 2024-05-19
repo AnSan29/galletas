@@ -39,5 +39,5 @@ document.addEventListener("DOMContentLoaded", () => {
     imagesContainer.style.transform = `translateX(-${currentIndex * 1150}px)`;
   }
 
-  setInterval(showNextImage, 5000);
+  setInterval(showNextImage, 10000);
 });
