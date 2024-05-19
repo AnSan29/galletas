@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     images[currentIndex].classList.remove("active");
     currentIndex = (currentIndex + 1) % images.length;
     images[currentIndex].classList.add("active");
-    imagesContainer.style.transform = `translateX(-${currentIndex * 1150}px)`;
+    imagesContainer.style.transform = `translateX(-${currentIndex * 50}%)`;
   }
 
   setInterval(showNextImage, 8000);
