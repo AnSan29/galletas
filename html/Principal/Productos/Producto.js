@@ -17,6 +17,24 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error("Button not found");
   }
 
+  const sliderButton = document.getElementById("sliderButton");
+  if (sliderButton) {
+    console.log("Button found");
+    sliderButton.addEventListener("click", function () {
+      console.log("Button clicked");
+      const phoneNumber = "573028658884"; // Reemplaza con tu número de WhatsApp en formato internacional
+      const message =
+        "Hola TortasMyJ estoy interesad@ en perzonalizar un pedido."; // Mensaje predefinido opcional
+      const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+        message
+      )}`;
+      console.log("Redirecting to", url);
+      window.location.href = url;
+    });
+  } else {
+    console.error("Button not found");
+  }
+
   let botones = document.querySelectorAll(".boton-item");
 
   botones.forEach(function (boton) {
@@ -39,5 +57,15 @@ document.addEventListener("DOMContentLoaded", () => {
     imagesContainer.style.transform = `translateX(-${currentIndex * 1150}px)`;
   }
 
-  setInterval(showNextImage, 10000);
+  setInterval(showNextImage, 8000);
 });
+
+document.querySelector(".dropbtn").addEventListener("click", toggleMenu);
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  if (menu.style.display === "none") {
+    menu.style.display = "block";
+  } else {
+    menu.style.display = "none";
+  }
+}

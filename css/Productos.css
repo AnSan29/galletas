@@ -33,9 +33,12 @@ body {
   left: 0;
   background-color: var(--secondary-color);
   z-index: 100;
-  padding: 10px 0;
+  padding: 15px 0;
 }
 
+.dropbtn {
+  display: none;
+}
 .logo {
   position: absolute;
   max-width: 15%;
@@ -48,12 +51,10 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-around;
-  position: relative;
 }
 .lista {
   margin-top: 10px;
   list-style: none;
-  padding: 0;
   display: flex;
 }
 
@@ -79,6 +80,12 @@ body {
 .lista_orden:last-child:hover {
   transform: none;
   color: none;
+}
+.logo {
+  position: absolute;
+  max-width: 15%;
+  height: auto;
+  top: 0;
 }
 
 i:hover {
@@ -292,4 +299,76 @@ body::-webkit-scrollbar-thumb {
   background-color: #ff69b4; /* Color del pulgar de la barra de desplazamiento (rosa) */
   border-radius: 10px; /* Bordes redondeados */
   border: 2px solid var(--secondary-color); /* Borde del pulgar de la barra de desplazamiento (rosa) */
+}
+@media (max-width: 600px) {
+  body {
+    background-image: linear-gradient(
+      to bottom,
+      var(--secondary-color) 95%,
+      var(--main-color) 55%
+    );
+  }
+
+  .logo {
+    position: absolute;
+    max-width: 30%;
+    height: auto;
+    top: 1.5%;
+    left: 65%;
+    z-index: 101;
+  }
+  .dropbtn {
+    display: block;
+    background-color: transparent;
+    width: 50px;
+    height: 50px;
+    font-size: 3rem;
+    border: none;
+    color: var(--main-color);
+    margin: 0 20px;
+  }
+
+  .lista {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60vh;
+    background-color: var(--secondary-color);
+    z-index: 2;
+  }
+  .lista_orden {
+    margin: 20px;
+  }
+
+  .button2 {
+    top: 82%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .carousel {
+    display: relative;
+    width: 10%;
+    height: 10vh;
+    cursor: pointer;
+    margin: auto;
+    margin-top: 30%;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+  footer {
+    width: 100%;
+    background-color: var(--main-color);
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: #222;
+    text-align: center;
+    padding: 10px 0;
+  }
 }
