@@ -11,25 +11,29 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/Inicio.css">
     <link rel="icon" href="/img/icon.png">
+
 </head>
 
 <body>
     <div class="Background">
         <!-- header donde esta el titulo -->
-        <header id="header">
-            <nav class="nav">
+        <header id="header" class="dropdown">
+            <button class="dropbtn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
+            <nav class="nav" id="menu">
                 <ul class="lista">
                     <li class="lista_orden"><a class="lista_link" href="/html/Principal/index.html">INICIO</a></li>
                     <li class="lista_orden"><a class="lista_link"
                             href="/html/Principal/Productos/Productos.html">PRODUCTOS</a></li>
                     <li class="lista_orden"><a class="lista_link"
                             href="/html/Principal/Nosotros/Nosotros.html">NOSOTROS</a></li>
-                    <li class="lista_orden"><a class="lista_link" href="/html/Principal/Carrito/Carrito.html"> <i
+                    <li class="lista_orden"><a class="lista_link" href="/html/Principal/Carrito/Carrito.html"><i
                                 class="fas fa-shopping-cart"></i></a></li>
                 </ul>
             </nav>
         </header>
+
         <!-- main page -->
+
         <img class="logo" src="/img/Logo.png" alt="">
     </div>
     <img class="imgprincipal" src="/img/20240110_114219-removebg-preview.png" alt="TortaPrincipal">
@@ -61,6 +65,7 @@
                 fill-rule="evenodd" fill="#fff"></path>
         </svg>
     </button>
+
 
     <footer>&copy; 2024 Tortas MyJ Todos los derechos reservados.
     </footer>
