@@ -60,9 +60,17 @@ document.addEventListener("DOMContentLoaded", () => {
   setInterval(showNextImage, 8000);
 });
 
-//Funcion Para Menu
-document.querySelector(".dropbtn").addEventListener("click", () => {
-  const menu = document.getElementById("menu");
-  menu.style.display = menu.style.display === "none" ? "block" : "none";
-});
+//Funcion Para Menu//
+document.querySelector(".dropbtn").addEventListener("click", toggleMenu);
+let body = document.querySelector("body");
 
+function toggleMenu() {
+  var menu = document.getElementById("menu");
+  if (menu.style.display === "block") {
+    menu.style.display = "none";
+    body.style.overflow = "auto";
+  } else {
+    menu.style.display = "block";
+    body.style.overflow = "hidden";
+  }
+}
