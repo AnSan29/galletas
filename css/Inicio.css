@@ -32,6 +32,8 @@ body {
   text-align: center;
   position: relative;
   box-sizing: border-box;
+  position: fixed;
+  z-index: 100;
 }
 
 .nav {
@@ -70,6 +72,20 @@ body {
   color: none;
 }
 
+.carrito-circulo {
+  position: relative;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  font-size: 0.8rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: inline-block;
+  line-height: 20px;
+  text-align: center;
+  margin-left: -8px;
+}
+
 .lista_orden:hover {
   transform: scale(1.1);
 }
@@ -84,8 +100,8 @@ body {
   max-width: 12%;
   height: auto;
   width: auto;
+  z-index: 101;
 }
-
 /* footer info */
 
 .footer_info {
