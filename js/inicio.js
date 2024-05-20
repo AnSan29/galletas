@@ -1,3 +1,4 @@
+//Funcion Para whatsapp//
 document.addEventListener("DOMContentLoaded", function () {
   console.log("DOM fully loaded and parsed");
   const whatsappButton = document.getElementById("whatsappButton");
@@ -34,14 +35,6 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.error("Button not found");
   }
-
-  let botones = document.querySelectorAll(".boton-item");
-
-  botones.forEach(function (boton) {
-    boton.addEventListener("click", function () {
-      alert("¡El botón ha sido clicado!");
-    });
-  });
 });
 
 //Funcion Para Dezlisar//
@@ -65,11 +58,22 @@ document.querySelector(".dropbtn").addEventListener("click", () => {
   const menu = document.getElementById("menu");
   menu.style.display = menu.style.display === "none" ? "block" : "none";
 });
+//Funcion Para carrito
+const contenedorTarjetas = document.getElementById("productos-container");
 
-
-
-
-
-
-
-
+function crearTarjetasProductosInicio(productos) {
+  productos.forEach((producto) => {
+    const nuevoPostre = document.createElement("div");
+    nuevoPostre.classList = "tarjeta-producto";
+    nuevoPostre.innerHTML = `
+      <img src="${producto.img}">
+      <h3>${producto.name}</h3>
+      <br>
+      <p>$${producto.price}</p>
+      <br>
+      <button>Agregar al carrito</button>
+    `;
+    contenedorTarjetas.appendChild(nuevoPostre);
+  });
+}
+crearTarjetasProductosInicio(postres);
