@@ -16,35 +16,19 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.error("Button not found");
   }
-
-  let botones = document.querySelectorAll(".boton-item");
-
-  botones.forEach(function (boton) {
-    boton.addEventListener("click", function () {
-      alert("¡El botón ha sido clicado!");
-    });
-  });
 });
 
+//Funcion Para Menu//
 document.querySelector(".dropbtn").addEventListener("click", toggleMenu);
+let body = document.querySelector("body");
+
 function toggleMenu() {
   var menu = document.getElementById("menu");
-  if (menu.style.display === "none") {
-    menu.style.display = "block";
-  } else {
+  if (menu.style.display === "block") {
     menu.style.display = "none";
+    body.style.overflow = "auto";
+  } else {
+    menu.style.display = "block";
+    body.style.overflow = "hidden";
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll(".image");
-  let current = 0;
-
-  images.forEach((image, index) => {
-    image.addEventListener("click", () => {
-      images[current].classList.add("hidden");
-      current = index;
-      images[current].classList.remove("hidden");
-    });
-  });
-});
