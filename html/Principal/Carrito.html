@@ -4,13 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosotros</title>
+    <title>Carrito</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.2.1/hamburgers.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/css/Nosotros.css">
+    <link rel="stylesheet" href="/css/Car.css">
     <link rel="icon" href="/img/icon.png">
+
 </head>
 
 <body>
@@ -20,40 +21,31 @@
         <button class="dropbtn" onclick="toggleMenu()"><i class="fas fa-bars"></i></button>
         <nav class="nav" id="menu">
             <ul class="lista">
-                <li class="lista_orden"><a class="lista_link" href="/html/Principal/Inicio/Inicio.html">INICIO</a></li>
-                <li class="lista_orden"><a class="lista_link" href="/html/Principal/Nosotros/Nosotros.html">NOSOTROS</a>
+                <li class="lista_orden"><a class="lista_link" href="/index.html">INICIO</a></li>
+                <li class="lista_orden"><a class="lista_link" href="/html/Principal/Nosotros.html">NOSOTROS</a>
                 </li>
-                <li class="lista_orden"><a class="lista_link" href="/html/Principal/Carrito/Carrito.html"><i
+                <li class="lista_orden"><a class="lista_link" href="/html/Principal/Carrito.html"><i
                             class="fas fa-shopping-cart"></i></a></li>
             </ul>
         </nav>
     </header>
 
     <!-- main page -->
-    <img class="logo" src="/img/Logo.png" alt="">
-    <main>
-        <section class="section">
-            <h1 class="nosotros">Acerca de nosotros</h1>
-            <p class="info">Soy Heidy Rivero, una joven emprendedora de la vibrante ciudad de Barranquilla,
-                Colombia. Mi pasión por la repostería comenzó desde pequeña, cuando ayudaba a mi abuela a preparar
-                deliciosos postres y pasteles para nuestras reuniones familiares. Inspirada por esos momentos llenos
-                de amor y sabor, decidí seguir mi sueño y convertirme en una pastelera profesional.
-                En 2020, en medio de los desafíos de la pandemia, decidí dar el gran paso y fundar mi propia empresa
-                de pastelería y tortas personalizadas, Mi objetivo era crear un espacio
-                donde cada pastel fuera una obra de arte única, diseñada y elaborada con los más altos estándares de
-                calidad y creatividad.
-            </p>
-        </section>
-    </main>
-    <div class="card">
-        <img class="imagen_card" src="/img/Profile.jpg" alt="">
-        <h3 class="name_card">HEYDY</h3>
-        <strong class="title_card">Emprendedora</strong>
-        <br>
-        <br>
-        <p class="info_card">Apasionada pastelera de Barranquilla, creadora de momentos dulces y memorales.
-        </p>
+    <div class="carrito">
+        <h1>Carrito</h1>
+        <p class="carrito_text">Su carrito actualmente está vacío.</p>
+        <button class="contactButton" onclick="location.href='/index.html'">
+            CONTINUAR CON LA COMPRA
+            <div class="iconButton">
+                <svg height="24" width="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M16.172 11l-5.364-5.364 1.414-1.414L20 12l-7.778 7.778-1.414-1.414L16.172 13H4v-2z"
+                        fill="currentColor"></path>
+                </svg>
+            </div>
+        </button>
     </div>
+    <img class="logo" src="/img/Logo.png" alt="">
 
     <button class="button2" id="whatsappButton">
         Escribenos
@@ -75,37 +67,10 @@
                 fill-rule="evenodd" fill="#fff"></path>
         </svg>
     </button>
-
-
-    <!-- Footer info -->
-    <footer class="footer_info">
-        <div class="footer-container">
-            <div class="contact-info">
-                <h3>Contacto</h3>
-                <p><strong>Ubicación:</strong> Barranquilla, Atlantico</p>
-                <p><strong>Teléfono:</strong> +57 302 865 8884</p>
-                <p><strong>Email:</strong> tortasmyj@gmail.com</p>
-            </div>
-            <div class="social-media">
-                <h3>Redes Sociales</h3>
-                <div class="social-icons">
-                    <a
-                        href="https://www.instagram.com/tortas_myj?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><i
-                            class="fab fa-instagram"></i></a>
-                </div>
-                <div class="social-icons">
-                    <a href="https://web.facebook.com/profile.php?id=100069416762116"><i
-                            class="fab fa-facebook"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
     <footer>&copy; 2024 Tortas MyJ Todos los derechos reservados.
     </footer>
-
     <script src="/js/index.js" type="module"></script>
-
+    </div>
 </body>
 
 </html>
