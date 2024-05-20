@@ -62,10 +62,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //Funcion Para Menu//
 document.querySelector(".dropbtn").addEventListener("click", toggleMenu);
-let body = document.querySelector("body");
 
 function toggleMenu() {
   var menu = document.getElementById("menu");
+  let body = document.querySelector("body");
+  
   if (menu.style.display === "block") {
     menu.style.display = "none";
     body.style.overflow = "auto";
