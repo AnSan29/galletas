@@ -154,7 +154,6 @@ main {
   gap: 2rem;
   padding: 1rem;
   max-width: 120rem;
-  width: 60%;
   margin: 2% auto;
   overflow: hidden;
 }
@@ -162,21 +161,16 @@ main {
   text-align: center;
   padding: 20px;
 }
+
 .tarjeta-producto {
   background: #fff;
   border-radius: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   padding: 1rem;
-  height: 250px; /* Set a fixed height */
-}
-
-.tarjeta-producto:hover {
-  transform: scale(1.03);
-  height: auto;
+  height: auto; /* Set a fixed height */
 }
 
 .tarjeta-producto img {
@@ -185,7 +179,6 @@ main {
   max-height: 150px;
   object-fit: contain;
   border-bottom: 2px solid #f3f4f6;
-  transition: transform 0.3s ease;
 }
 
 .tarjeta-producto h3 {
@@ -201,7 +194,76 @@ main {
   margin: 0.5rem 0;
   font-weight: bold;
 }
+.menos {
+  background: var(--main-color);
+  width: 20px;
+  height: 20px;
+  color: rgb(0, 0, 0);
+  padding: 0;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  line-height: 20px;
+  border: none;
+  cursor: pointer;
+}
+.menos:hover {
+  opacity: 0.8;
+}
+.mas {
+  background: var(--main-color);
+  width: 20px;
+  height: 20px;
+  color: rgb(0, 0, 0);
+  padding: 0;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  line-height: 20px;
+  border: none;
+  cursor: pointer;
+}
+.mas:hover {
+  opacity: 0.8;
+}
+.carrito-cantidad {
+  padding: 0 1rem;
+  font-size: 2rem;
+  font-weight: bolder;
+}
 
+#comprarwatsapp {
+  border: none;
+  background: var(--main-color);
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-align: center;
+}
+#comprarwatsapp:hover {
+  opacity: 0.8;
+}
+#reiniciar {
+  border: none;
+  background: var(--main-color);
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 1px;
+  overflow: hidden;
+  text-align: center;
+}
+#reiniciar:hover {
+  opacity: 0.8;
+}
 /* CARRITO VACIO */
 
 .carrito {
@@ -337,6 +399,17 @@ main {
   top: -45%;
   background-color: #009087;
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+/*carrito lleno*/
+
+#productos-container {
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
 }
 
 /* media queries */

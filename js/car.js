@@ -55,9 +55,9 @@ function crearTarjetasProductosInicio() {
       <p>$${producto.price}</p>
       <br>
       <div>
-        <button>-</button>
+        <button class="menos">-</button>
         <span class="carrito-cantidad">${producto.cantidad}</span>
-        <button>+</button>
+        <button class="mas">+</button>
       </div>
     `;
 
@@ -121,4 +121,22 @@ function reiniciarCarrito() {
   revisarMensajeVacio();
   actualizarTotales();
   crearTarjetasProductosInicio();
+}
+
+const sliderButton = document.getElementById("comprarwatsapp");
+if (comprarwatsapp) {
+  console.log("Button found");
+  sliderButton.addEventListener("click", function () {
+    console.log("Button clicked");
+    const phoneNumber = "573028658884"; // Reemplaza con tu número de WhatsApp en formato internacional
+    const message =
+      "Hola TortasMyJ estoy interesad@ en perzonalizar un pedido."; // Mensaje predefinido opcional
+    const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(
+      message
+    )}`;
+    console.log("Redirecting to", url);
+    window.location.href = url;
+  });
+} else {
+  console.error("Button not found");
 }
