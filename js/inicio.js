@@ -58,6 +58,8 @@ document.querySelector(".dropbtn").addEventListener("click", () => {
   const menu = document.getElementById("menu");
   menu.style.display = menu.style.display === "none" ? "block" : "none";
 });
+
+
 //Funcion Para carrito
 const contenedorTarjetas = document.getElementById("productos-container");
 
@@ -74,6 +76,11 @@ function crearTarjetasProductosInicio(productos) {
       <button>Agregar al carrito</button>
     `;
     contenedorTarjetas.appendChild(nuevoPostre);
+
+    nuevoPostre
+      .getElementsByTagName("button")[0]
+      .addEventListener("click", () => agregarAlCarrito(producto));
   });
 }
+
 crearTarjetasProductosInicio(postres);

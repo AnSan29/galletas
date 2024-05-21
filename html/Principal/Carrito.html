@@ -11,6 +11,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/Car.css">
     <link rel="icon" href="/img/icon.png">
+    <script src="/js/postres.js"></script>
+    <script src="/js/car.js" type="module"></script>
+    <script src="/js/carService.js" defer></script>
 
 </head>
 
@@ -25,7 +28,7 @@
                 <li class="lista_orden"><a class="lista_link" href="/html/Principal/Nosotros.html">NOSOTROS</a>
                 </li>
                 <li class="lista_orden"><a class="lista_link" href="/html/Principal/Carrito.html"><i
-                            class="fas fa-shopping-cart"></i> <span class="carrito-circulo">0</span>
+                            class="fas fa-shopping-cart"></i> <span id="cuenta-carrito">0</span>
                     </a></li>
             </ul>
         </nav>
@@ -38,8 +41,20 @@
 
 
     <main class="main">
+
         <!-- seccion carrito -->
 
+        <section id="productos-container"></section>
+        <section id="totales">
+            <p>Total unidades: <span id="unidades">0</span></p>
+            <p>total precio: $<span id="precio">0</span></p>
+            <button>Comprar</button>
+            <button>Vaciar Carrito</button>
+        </section>
+
+
+
+        <!--
         <section class="carrito">
             <h1>Carrito</h1>
             <p class="carrito_text">Su carrito actualmente está vacío.</p>
@@ -54,7 +69,7 @@
                 </div>
             </button>
         </section>
-
+-->
 
         <!-- boton Whatsapp -->
         <button class="button2" id="whatsappButton">
@@ -109,7 +124,6 @@
 
 
 
-    <script src="/js/index.js" type="module"></script>
     </div>
 </body>
 

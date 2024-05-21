@@ -72,7 +72,7 @@ body {
   color: none;
 }
 
-.carrito-circulo {
+#cuenta-carrito {
   position: relative;
   background-color: var(--main-color);
   color: var(--secondary-color);
@@ -200,7 +200,7 @@ body {
 }
 
 .tarjeta-producto img {
-  width: 100%;
+  width: 50%;
   height: auto;
   max-height: 150px;
   object-fit: contain;
