@@ -173,11 +173,11 @@ body {
 
 #productos-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 2rem;
   padding: 1rem;
   max-width: 120rem;
-  width: 60%;
+  width: 70%;
   margin: 2% auto;
   overflow: hidden;
 }
@@ -190,8 +190,8 @@ body {
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
-  padding: 1rem;
-  height: 250px; /* Set a fixed height */
+  padding: 16px;
+  height: auto; /* Set a fixed height */
 }
 
 .tarjeta-producto:hover {
@@ -206,6 +206,7 @@ body {
   object-fit: contain;
   border-bottom: 2px solid #f3f4f6;
   transition: transform 0.3s ease;
+  border-radius: 50%;
 }
 
 .tarjeta-producto h3 {
@@ -218,32 +219,23 @@ body {
 .tarjeta-producto p {
   color: #28a745;
   font-size: 1.3rem;
-  margin: 0.5rem 0;
   font-weight: bold;
 }
 
-.boton-item {
+.tarjeta-producto button {
   background: linear-gradient(135deg, #ff98cb, #ff98cbf1 50%);
   border: none;
   color: #fff;
-  padding: 0.75em 1.5em;
-  margin: 1em 0;
+  padding: 15px;
+  margin: 10px 0;
   cursor: pointer;
   border-radius: 30px;
   font-size: 1em;
-  transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
-  opacity: 0;
   transform: translateY(10px);
 }
 
-.item:hover .boton-item {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.boton-item:hover {
+.tarjeta-producto button:hover {
   background: black;
-  transform: scale(1.05);
 }
 
 /* BOTON watsapp */
@@ -345,6 +337,7 @@ body::-webkit-scrollbar-thumb {
 
 @media (max-width: 700px) {
   .carousel {
+    margin-top: 20%;
     width: 90%;
     height: 100%;
   }
@@ -354,14 +347,14 @@ body::-webkit-scrollbar-thumb {
     height: 30vh;
   }
 
-  .contenedor-items {
+  #productos-container {
     width: 50%;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     gap: 1rem;
     padding: 0.5rem;
     margin: 2% auto;
   }
-  .boton-item {
+  .tarjeta-producto button {
     opacity: 1;
     transform: none;
   }
@@ -370,7 +363,7 @@ body::-webkit-scrollbar-thumb {
     transform: none;
     height: auto;
   }
-  .item {
+  .tarjeta-producto {
     height: auto;
   }
 
@@ -441,4 +434,7 @@ body::-webkit-scrollbar-thumb {
   .dropbtn i {
     color: var(--main-color);
   }
+}
+.escondido {
+  display: none;
 }

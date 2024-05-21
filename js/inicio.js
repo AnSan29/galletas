@@ -59,7 +59,6 @@ document.querySelector(".dropbtn").addEventListener("click", () => {
   menu.style.display = menu.style.display === "none" ? "block" : "none";
 });
 
-
 //Funcion Para carrito
 const contenedorTarjetas = document.getElementById("productos-container");
 
@@ -73,7 +72,7 @@ function crearTarjetasProductosInicio(productos) {
       <br>
       <p>$${producto.price}</p>
       <br>
-      <button>Agregar al carrito</button>
+      <button class="agregar-carrito">Agregar al carrito</button>
     `;
     contenedorTarjetas.appendChild(nuevoPostre);
 

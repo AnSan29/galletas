@@ -212,7 +212,9 @@ main {
   flex-direction: column;
   padding: 10px;
 }
-
+.escondido {
+  display: none;
+}
 .carrito_text {
   margin-top: 20px;
   color: #474747;

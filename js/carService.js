@@ -1,21 +1,26 @@
 function agregarAlCarrito(producto) {
-  const memoria = JSON.parse(localStorage.getItem("postres"));
+  //Reviso si el producto está en el carrito.
+  let memoria = JSON.parse(localStorage.getItem("postres"));
   console.log(memoria);
   let cuenta = 0;
   if (!memoria) {
     const nuevoProducto = getNuevoProductoParaMemoria(producto);
     localStorage.setItem("postres", JSON.stringify([nuevoProducto]));
+    actualizarNumeroCarrito();
     cuenta = 1;
   } else {
+    //Si hay localstorage me fijo si el artículo ya está ahí
     const indiceProducto = memoria.findIndex(
-      (postre) => postre.id === producto.id
+      (postres) => postres.id === producto.id
     );
-    console.log(indiceProducto);
     const nuevaMemoria = memoria;
+    //Si el producto no está en el carrito lo agrego
     if (indiceProducto === -1) {
-      nuevaMemoria.push(getNuevoProductoParaMemoria(producto));
+      const nuevoProducto = getNuevoProductoParaMemoria(producto);
+      nuevaMemoria.push(nuevoProducto);
       cuenta = 1;
     } else {
+      //Si el producto está en el carrito le agrego 1 a la cantidad.
       nuevaMemoria[indiceProducto].cantidad++;
       cuenta = nuevaMemoria[indiceProducto].cantidad;
     }
@@ -24,11 +29,12 @@ function agregarAlCarrito(producto) {
   actualizarNumeroCarrito();
   return cuenta;
 }
+
 //Restar carrito en carrito
 function restarAlCarrito(producto) {
   const memoria = JSON.parse(localStorage.getItem("postres"));
   const indiceProducto = memoria.findIndex(
-    (postre) => postre.id === producto.id
+    (postres) => postres.id === producto.id
   );
   if (memoria[indiceProducto].cantidad === 1) {
     memoria.splice(indiceProducto, 1);
@@ -46,11 +52,11 @@ function getNuevoProductoParaMemoria(producto) {
   nuevoProducto.cantidad = 1;
   return nuevoProducto;
 }
-//Funcion para actualizar numero en el carrito
-const cuentaCarritoElement = document.getElementById("cuenta-carrito");
 
+//Funcion para actualziar el numero del carrito
+const cuentaCarritoElement = document.getElementById("cuenta-carrito");
 function actualizarNumeroCarrito() {
-  const memoria = JSON.parse(localStorage.getItem("postres")) || [];
+  const memoria = JSON.parse(localStorage.getItem("postres"));
   const cuenta = memoria.reduce((acum, current) => acum + current.cantidad, 0);
   cuentaCarritoElement.innerText = cuenta;
 }

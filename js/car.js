@@ -35,13 +35,15 @@ function toggleMenu() {
 
 //Funcion Para carrito
 const contenedorTarjetas = document.getElementById("productos-container");
-const unidadesElement = document.getElementById("unidades");
+const cantidadElement = document.getElementById("cantidad");
 const precioElement = document.getElementById("precio");
+const carritoVacioElement = document.getElementById("CarritoVacio");
+const totalesElement = document.getElementById("totales");
+const reiniciarCarritoElement = document.getElementById("reiniciar");
 
 function crearTarjetasProductosInicio() {
   contenedorTarjetas.innerHTML = "";
   const productos = JSON.parse(localStorage.getItem("postres"));
-  console.log(productos);
   if (productos && productos.length > 0) {
     productos.forEach((producto) => {
       const nuevoPostre = document.createElement("div");
@@ -63,12 +65,10 @@ function crearTarjetasProductosInicio() {
       nuevoPostre
         .getElementsByTagName("button")[1]
         .addEventListener("click", (e) => {
-          agregarAlCarrito(producto);
           const cuentaElement =
             e.target.parentElement.getElementsByTagName("span")[0];
           cuentaElement.innerText = agregarAlCarrito(producto);
           actualizarTotales();
-          actualizarNumeroCarrito();
         });
 
       nuevoPostre
@@ -77,7 +77,6 @@ function crearTarjetasProductosInicio() {
           restarAlCarrito(producto);
           crearTarjetasProductosInicio();
           actualizarTotales();
-          actualizarNumeroCarrito();
         });
     });
   }
@@ -86,18 +85,40 @@ function crearTarjetasProductosInicio() {
 crearTarjetasProductosInicio();
 actualizarTotales();
 
-//Actualizar Total en carrito
-
+//Actualizar precio y cantidad
 function actualizarTotales() {
-  const producto = JSON.parse(localStorage.getItem("postres"));
-  let unidades = 0;
+  const productos = JSON.parse(localStorage.getItem("postres"));
+  let cantidad = 0;
   let precio = 0;
-  if (producto && producto.length > 0) {
-    producto.forEach((producto) => {
-      unidades += producto.cantidad;
-      precio += producto.precio * producto.cantidad;
+  if (productos && productos.length > 0) {
+    productos.forEach((producto) => {
+      cantidad += producto.cantidad;
+      precio += producto.price * producto.cantidad;
     });
-    unidadesElement.innerText = unidades;
-    precioElement.innerText = precio;
+    cantidadElement.innerText = cantidad;
+    precioElement.innerText = `$${precio}`;
   }
+  revisarMensajeVacio();
+}
+//Se me pone vacio
+function revisarMensajeVacio() {
+  const productos = JSON.parse(localStorage.getItem("postres"));
+  console.log(productos, productos == true);
+  carritoVacioElement.classList.toggle(
+    "escondido",
+    productos && productos.length > 0
+  );
+  totalesElement.classList.toggle(
+    "escondido",
+    !(productos && productos.length > 0)
+  );
+}
+revisarMensajeVacio();
+
+reiniciarCarritoElement.addEventListener("click", reiniciarCarrito);
+function reiniciarCarrito() {
+  localStorage.removeItem("postres");
+  revisarMensajeVacio();
+  actualizarTotales();
+  crearTarjetasProductosInicio();
 }
