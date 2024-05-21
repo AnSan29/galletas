@@ -68,6 +68,7 @@ function crearTarjetasProductosInicio() {
             e.target.parentElement.getElementsByTagName("span")[0];
           cuentaElement.innerText = agregarAlCarrito(producto);
           actualizarTotales();
+          actualizarNumeroCarrito();
         });
 
       nuevoPostre
@@ -76,6 +77,7 @@ function crearTarjetasProductosInicio() {
           restarAlCarrito(producto);
           crearTarjetasProductosInicio();
           actualizarTotales();
+          actualizarNumeroCarrito();
         });
     });
   }
@@ -93,7 +95,7 @@ function actualizarTotales() {
   if (producto && producto.length > 0) {
     producto.forEach((producto) => {
       unidades += producto.cantidad;
-      precio += producto.precio + producto.cantidad;
+      precio += producto.precio * producto.cantidad;
     });
     unidadesElement.innerText = unidades;
     precioElement.innerText = precio;
