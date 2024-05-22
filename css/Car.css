@@ -31,13 +31,20 @@ body {
   text-align: center;
   position: relative;
   box-sizing: border-box;
+  position: fixed;
+  z-index: 100;
+}
+header > .lista_orden {
+  margin-left: 90%;
+  margin-top: -2.2%;
 }
 
 .nav {
   display: block;
-  width: 100%;
+  width: 85%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  margin-left: 15%;
 }
 .lista {
   margin-top: 10px;
@@ -46,8 +53,8 @@ body {
 }
 
 .lista_orden {
-  margin: 0 40px;
-  transition: transform 0.3s ease-in-out;
+  margin: 0 30px;
+  list-style: none;
 }
 
 .lista_link {
@@ -60,18 +67,16 @@ body {
 .lista_orden:last-child .lista_link:hover {
   color: #ff98cb79;
 }
-.lista_link:hover {
+.lista_orden:last-child .lista_link:active {
+  color: #ff98cb79;
+}
+.lista:active .lista_link:active a:active {
+  color: #63eb0f;
+}
+.lista:hover .lista_link:hover {
   color: #222;
 }
 
-.lista_orden:last-child:hover {
-  transform: none;
-  color: none;
-}
-
-.lista_orden:hover {
-  transform: scale(1.1);
-}
 #cuenta-carrito {
   position: relative;
   background-color: var(--main-color);
@@ -85,6 +90,11 @@ body {
   text-align: center;
   margin-left: -8px;
 }
+
+.lista .lista_orden:hover {
+  transform: scale(1.05);
+}
+
 /* BOTON MENU */
 .dropbtn {
   display: none;
@@ -96,6 +106,7 @@ body {
   max-width: 12%;
   height: auto;
   width: auto;
+  z-index: 101;
 }
 /* footer info */
 
@@ -334,8 +345,7 @@ main {
   opacity: 0.8;
 }
 
-/*Botnon de whatsapp*/
-
+/* BOTON watsapp */
 .button2 {
   display: inline-block;
   transition: all 0.2s ease-in;
@@ -343,7 +353,7 @@ main {
   overflow: hidden;
   z-index: 1;
   color: #090909;
-  padding: 0.7em 3.3em 0.7em 1.7em;
+  padding: 0.5em 2.5em 0.5em 0.7em;
   font-size: 18px;
   border-radius: 0.5em;
   background: #e8e8e8;
@@ -431,6 +441,8 @@ main {
     display: none;
   }
 
+  /* BOTON WP*/
+
   .button2 {
     display: inline-block;
     transition: all 0.2s ease-in;
@@ -457,44 +469,61 @@ main {
     transform: translate(-50%, -50%);
   }
 
-  .nav {
-    background-color: transparent;
-    display: none;
+  /* HEADER*/
+
+  #header {
     width: 100%;
+    padding: 5px;
+  }
+  .nav {
+    display: none;
     height: 100vh;
+    margin: auto;
   }
   .lista {
-    margin-top: 100px;
-    list-style: none;
     display: flex;
+    list-style: none;
     flex-direction: column;
-    justify-content: space-evenly;
     height: 50%;
+    justify-content: center;
     align-items: center;
   }
-
   .lista_orden {
-    display: flex;
-    margin: 0 10px;
-    transition: transform 0.3s ease-in-out;
+    padding: 10px 10px;
+    margin: 5px;
+    text-align: center;
+    list-style: none;
   }
+  header > .lista_orden {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  #cuenta-carrito {
+    position: absolute;
+    top: 20px;
+    right: -10px;
+  }
+
+  /* Boton menu*/
 
   .dropbtn {
     display: block;
     background-color: transparent;
-    width: 50px;
-    height: 50px;
-    font-size: 3rem;
+    font-size: 2.5rem;
     border: none;
     color: var(--main-color);
     margin: 0 20px;
     cursor: pointer;
+  }
+  .dropbtn:active {
+    opacity: 0.5;
   }
 
   .dropbtn i {
     color: var(--main-color);
   }
   main {
-    margin-top: 150px;
+    margin-top: 20%;
   }
 }

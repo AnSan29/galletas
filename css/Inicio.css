@@ -45,7 +45,7 @@ header > .lista_orden {
   width: 85%;
   display: flex;
   justify-content: flex-start;
-  margin-left: 200px;
+  margin-left: 15%;
 }
 .lista {
   margin-top: 10px;
@@ -352,7 +352,7 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid var(--secondary-color); /* Borde del pulgar de la barra de desplazamiento (rosa) */
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   /* carousel*/
   .carousel {
     margin-top: 20%;
@@ -443,8 +443,14 @@ body::-webkit-scrollbar-thumb {
     list-style: none;
   }
   header > .lista_orden {
-    margin-left: 80%;
-    margin-top: -11%;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  #cuenta-carrito {
+    position: absolute;
+    top: 20px;
+    right: -10px;
   }
 
   /* Boton menu*/
@@ -466,8 +472,58 @@ body::-webkit-scrollbar-thumb {
     color: var(--main-color);
   }
 
-  /* Econder totales delcart*/
+  .tarjeta-producto {
+    background: linear-gradient(
+      to bottom,
+      var(--main-color) 40%,
+      var(--secondary-color) 40%
+    );
+    border-radius: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    padding: 16px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta-producto:hover {
+    transform: scale(1.01);
+  }
+
+  .tarjeta-producto img {
+    width: 75%;
+    height: auto;
+    margin-top: 20%;
+    border-radius: 10px;
+  }
+
+  .tarjeta-producto h3 {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20%;
+  }
+
+  .tarjeta-producto span {
+    font-size: 12px;
+    color: #888;
+    margin-top: 5px;
+  }
+
+  .tarjeta-producto p {
+    font-size: 20px;
+    color: #333;
+    color: var(--main-color);
+    margin-top: 5px;
+  }
 }
+
+/* Econder totales delcart*/
+
 .escondido {
   display: none;
 }

@@ -10,6 +10,9 @@
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/Nosotros.css">
+    <script src="/js/postres.js"></script>
+    <script src="/js/inicio.js" defer></script>
+    <script src="/js/carService.js" defer></script>
     <link rel="icon" href="/img/icon.png">
 </head>
 
@@ -21,13 +24,12 @@
         <nav class="nav" id="menu">
             <ul class="lista">
                 <li class="lista_orden"><a class="lista_link" href="/index.html">INICIO</a></li>
-                <li class="lista_orden"><a class="lista_link" href="/html/Principal/Nosotros.html">NOSOTROS</a>
-                </li>
-                <li class="lista_orden"><a class="lista_link" href="/html/Principal/Carrito.html"><i
-                            class="fas fa-shopping-cart"></i> <span class="carrito-circulo">0</span>
-                    </a></li>
+                <li class="lista_orden"><a class="lista_link" href="/html/Principal/Nosotros.html">NOSOTROS</a></li>
             </ul>
         </nav>
+        <li class="lista_orden"><a class="lista_link" href="/html/Principal/Carrito.html"><i
+                    class="fas fa-shopping-cart"></i> <span id="cuenta-carrito">0</span>
+            </a></li>
     </header>
 
     <!-- LOGO -->
@@ -112,7 +114,7 @@
         <p>&copy; 2024 Tortas MyJ Todos los derechos reservados.</p>
     </footer>
 
-    <script src="/js/index.js" type="module"></script>
+
 
 </body>
 
