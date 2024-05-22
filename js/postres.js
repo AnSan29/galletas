@@ -4,6 +4,7 @@ const postres = [
     name: "Porcion banano",
     price: 5000,
     img: "img/IMG-20240416-WA0007.jpg",
+    description: "Deliciosa torta hecha con ingredieentes naturales",
   },
   {
     id: 2,

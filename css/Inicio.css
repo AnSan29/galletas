@@ -35,12 +35,16 @@ body {
   position: fixed;
   z-index: 100;
 }
+header > .lista_orden {
+  margin-left: 80%;
+}
 
 .nav {
   display: block;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
+  margin-left: 200px;
 }
 .lista {
   margin-top: 10px;
@@ -51,6 +55,7 @@ body {
 .lista_orden {
   margin: 0 40px;
   transition: transform 0.3s ease-in-out;
+  list-style: none;
 }
 
 .lista_link {
@@ -62,6 +67,10 @@ body {
 
 .lista_orden:last-child .lista_link:hover {
   color: #ff98cb79;
+}
+.lista_orden:last-child .lista_link:last-child {
+  position: absolute;
+  top: 20px;
 }
 .lista_link:hover {
   color: #222;
@@ -176,14 +185,18 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
   gap: 2rem;
   padding: 1rem;
-  max-width: 120rem;
-  width: 70%;
+  max-width: 60rem;
+  width: 80%;
   margin: 2% auto;
   overflow: hidden;
 }
 
 .tarjeta-producto {
-  background: #fff;
+  background: linear-gradient(
+    to bottom,
+    var(--main-color) 50%,
+    var(--secondary-color) 50%
+  );
   border-radius: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -191,50 +204,56 @@ body {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   padding: 16px;
-  height: auto; /* Set a fixed height */
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .tarjeta-producto:hover {
-  transform: scale(1.03);
-  height: auto;
+  transform: scale(1.01);
 }
 
 .tarjeta-producto img {
-  width: 50%;
-  height: auto;
-  max-height: 150px;
-  object-fit: contain;
-  border-bottom: 2px solid #f3f4f6;
-  transition: transform 0.3s ease;
-  border-radius: 50%;
+  width: 80%;
+  margin-top: 30%;
+  border-radius: 10px;
 }
 
 .tarjeta-producto h3 {
-  font-size: 1.5rem;
-  margin: 1rem 0 0.5rem 0;
-  padding: 0 1rem;
-  color: #343a40;
+  font-weight: bold;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.tarjeta-producto span {
+  font-size: 14px;
+  color: #888;
+  margin-top: 5px;
 }
 
 .tarjeta-producto p {
-  color: #28a745;
-  font-size: 1.3rem;
-  font-weight: bold;
+  font-size: 20px;
+  color: #333;
+  color: var(--main-color);
+  margin-top: 10px;
 }
 
 .tarjeta-producto button {
-  background: linear-gradient(135deg, #ff98cb, #ff98cbf1 50%);
-  border: none;
+  background-color: var(--main-color);
   color: #fff;
-  padding: 15px;
-  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px;
   cursor: pointer;
-  border-radius: 30px;
-  font-size: 1em;
-  transform: translateY(10px);
 }
 
 .tarjeta-producto button:hover {
+  opacity: 0.8;
+  background-color: #ff98cb;
+}
+.tarjeta-producto button:active {
   background: black;
 }
 
@@ -396,9 +415,10 @@ body::-webkit-scrollbar-thumb {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-
+  #header {
+    width: 50%;
+  }
   .nav {
-    background-color: transparent;
     display: none;
     width: 100%;
     height: 100vh;
@@ -417,6 +437,12 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     margin: 0 10px;
     transition: transform 0.3s ease-in-out;
+  }
+  header > .lista_orden {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 95%;
   }
 
   .dropbtn {

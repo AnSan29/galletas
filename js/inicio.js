@@ -69,7 +69,7 @@ function crearTarjetasProductosInicio(productos) {
     nuevoPostre.innerHTML = `
       <img src="${producto.img}">
       <h3>${producto.name}</h3>
-      <br>
+      <span>${producto.description}</span>
       <p>$${producto.price}</p>
       <br>
       <button class="agregar-carrito">Agregar al carrito</button>

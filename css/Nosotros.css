@@ -109,6 +109,7 @@ body {
   margin: auto;
   padding: 20px;
   box-sizing: border-box;
+  box-shadow: #2222226c 0px 3px 30px -20px;
 }
 
 /* Sección principal */
@@ -133,27 +134,30 @@ body {
   text-align: center;
   padding: 20px;
   margin: 10px;
-  border-radius: 50px;
   background-color: var(--secondary-color);
-  border-radius: 35px;
-  box-shadow: #2222226c 0px 20px 100px -20px;
   margin-left: 100px;
+  border: 2px solid var(--main-color);
+  border-radius: 5px;
 }
 
 .imagen_card {
   width: 100%;
   max-width: 100px;
-  border-radius: 50px;
+  border-radius: 50%;
   margin-bottom: 10px;
 }
 
 .name_card {
   font-size: 24px;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .title_card {
   font-weight: bold;
+  margin: 0 0 -10px 0;
+  color: #666;
+}
+.info_card {
   color: #666;
   margin-bottom: 10px;
 }

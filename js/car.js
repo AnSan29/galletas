@@ -54,7 +54,7 @@ function crearTarjetasProductosInicio() {
       <br>
       <p>$${producto.price}</p>
       <br>
-      <div>
+      <div class="carrito-cantidad-contenedor">
         <button class="menos">-</button>
         <span class="carrito-cantidad">${producto.cantidad}</span>
         <button class="mas">+</button>
@@ -123,6 +123,7 @@ function reiniciarCarrito() {
   crearTarjetasProductosInicio();
 }
 
+//Funcion para comprar con whatsapp CARRITO
 const sliderButton = document.getElementById("comprarwatsapp");
 if (comprarwatsapp) {
   console.log("Button found");
