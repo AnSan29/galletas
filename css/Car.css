@@ -154,7 +154,13 @@ header > .lista_orden {
 }
 
 main {
+  background-color: #ffffff;
+  width: 100%;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 /* carrito de compra */
@@ -164,13 +170,13 @@ main {
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
-  max-width: 600px;
   overflow: hidden;
   border-radius: 1rem;
+  margin: auto;
+  width: 50%;
 }
 
 .tarjeta-producto {
-  background: #fff;
   border-radius: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -183,8 +189,14 @@ main {
   padding: 0px 20px;
 }
 #totales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  padding: 20px;
+  justify-content: center;
+  margin: auto;
+  height: 100%;
+  width: 50%;
 }
 
 .tarjeta-producto img {
@@ -207,15 +219,18 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid grey;
+  border-radius: 50px;
+  padding: 0px 8px;
 }
 .tarjeta-producto p {
   color: black;
-  font-size: 1.2rem;
+  font-size: 1rem;
   margin: 0.5rem 40px;
   font-weight: bolder;
 }
 .menos {
-  background: var(--main-color);
+  background-color: transparent;
   width: 15px;
   height: 15px;
   color: rgb(0, 0, 0);
@@ -223,16 +238,19 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border-radius: 50%;
   border: none;
   cursor: pointer;
 }
 .menos:hover {
-  opacity: 0.8;
+  opacity: 0.5;
+}
+.menos:active {
+  opacity: 0.5;
 }
 .mas {
-  background: var(--main-color);
+  background-color: transparent;
   width: 15px;
   height: 15px;
   color: rgb(0, 0, 0);
@@ -240,17 +258,41 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2rem;
+  font-size: 1rem;
   border-radius: 50%;
   border: none;
   cursor: pointer;
 }
 .mas:hover {
-  opacity: 0.8;
+  opacity: 0.5;
+}
+.mas:active {
+  opacity: 0.5;
 }
 .carrito-cantidad {
-  padding: 0 1px;
-  font-size: 1.2rem;
+  padding: 0 5px;
+  font-size: 0.9rem;
+  font-weight: bolder;
+}
+.cantida {
+  position: relative;
+  top: 90px;
+  padding: 20px;
+  font-size: 1rem;
+}
+.precio {
+  position: relative;
+  top: 90px;
+  padding: 20px;
+  font-size: 1rem;
+}
+#cantidad {
+  font-size: 1rem;
+  font-weight: bolder;
+}
+
+#precio {
+  font-size: 1rem;
   font-weight: bolder;
 }
 
@@ -261,29 +303,30 @@ main {
   padding: 0.5rem 20px;
   font-size: 1rem;
   font-weight: bold;
-  border-radius: 15px;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
   letter-spacing: 1px;
   overflow: hidden;
   text-align: center;
+  position: relative;
+  top: 50px;
 }
+
 #comprarwatsapp:hover {
   opacity: 0.8;
 }
 #reiniciar {
+  background-color: transparent;
   border: none;
-  background: var(--main-color);
-  color: white;
+  color: gray;
   padding: 0.5rem 20px;
   font-size: 1rem;
   font-weight: bold;
-  border-radius: 15px;
-  border: none;
   cursor: pointer;
   letter-spacing: 1px;
-  overflow: hidden;
-  text-align: center;
+  position: relative;
+  top: 50px;
 }
 #reiniciar:hover {
   opacity: 0.8;
@@ -297,6 +340,7 @@ main {
   align-items: center;
   flex-direction: column;
   padding: 10px;
+  margin: auto;
 }
 .escondido {
   display: none;
