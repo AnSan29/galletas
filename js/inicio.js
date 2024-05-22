@@ -67,7 +67,7 @@ function crearTarjetasProductosInicio(productos) {
     const nuevoPostre = document.createElement("div");
     nuevoPostre.classList = "tarjeta-producto";
     nuevoPostre.innerHTML = `
-      <img src="${producto.img}">
+      <img src="./img/${producto.img}.jpg">
       <h3>${producto.name}</h3>
       <span>${producto.description}</span>
       <p>$${producto.price}</p>
@@ -79,7 +79,27 @@ function crearTarjetasProductosInicio(productos) {
     nuevoPostre
       .getElementsByTagName("button")[0]
       .addEventListener("click", () => agregarAlCarrito(producto));
+    nuevoPostre
+      .getElementsByTagName("button")[0]
+      .addEventListener("click", () => mostrarModal());
   });
 }
 
 crearTarjetasProductosInicio(postres);
+
+function mostrarModal() {
+  const modal = document.getElementById("modal");
+  const closeBtn = modal.querySelector(".close");
+
+  modal.style.display = "block";
+
+  closeBtn.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  };
+}

@@ -352,6 +352,54 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid var(--secondary-color); /* Borde del pulgar de la barra de desplazamiento (rosa) */
 }
 
+#modal {
+  display: none; /* Oculto por defecto */
+  position: fixed; /* Fijo al viewport */
+  z-index: 1; /* Por encima de otros elementos */
+  left: 0;
+  top: 0;
+  width: 100%; /* Ancho completo */
+  height: 100%; /* Alto completo */
+  overflow: auto; /* Desplazamiento si es necesario */
+}
+#modal p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 5px;
+  border: 1px solid #888;
+  width: 40%;
+  max-width: 400px;
+  text-align: center;
+  border-radius: 10px;
+  position: relative;
+}
+
+.close {
+  background-color: var(--main-color);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #aaa;
+  float: bottom right;
+  padding: 0px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  margin: 10px;
+  position: relative;
+  right: -150px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   /* carousel*/
   .carousel {
@@ -519,6 +567,13 @@ body::-webkit-scrollbar-thumb {
     color: #333;
     color: var(--main-color);
     margin-top: 5px;
+  }
+  .close {
+    position: relative;
+    right: 0px;
+  }
+  .modal-content {
+    margin-top: 50%;
   }
 }
 
