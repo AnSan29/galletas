@@ -36,12 +36,13 @@ body {
   z-index: 100;
 }
 header > .lista_orden {
-  margin-left: 80%;
+  margin-left: 90%;
+  margin-top: -2.2%;
 }
 
 .nav {
   display: block;
-  width: 100%;
+  width: 85%;
   display: flex;
   justify-content: flex-start;
   margin-left: 200px;
@@ -53,8 +54,7 @@ header > .lista_orden {
 }
 
 .lista_orden {
-  margin: 0 40px;
-  transition: transform 0.3s ease-in-out;
+  margin: 0 30px;
   list-style: none;
 }
 
@@ -68,17 +68,14 @@ header > .lista_orden {
 .lista_orden:last-child .lista_link:hover {
   color: #ff98cb79;
 }
-.lista_orden:last-child .lista_link:last-child {
-  position: absolute;
-  top: 20px;
+.lista_orden:last-child .lista_link:active {
+  color: #ff98cb79;
 }
-.lista_link:hover {
+.lista:active .lista_link:active a:active {
+  color: #63eb0f;
+}
+.lista:hover .lista_link:hover {
   color: #222;
-}
-
-.lista_orden:last-child:hover {
-  transform: none;
-  color: none;
 }
 
 #cuenta-carrito {
@@ -95,9 +92,10 @@ header > .lista_orden {
   margin-left: -8px;
 }
 
-.lista_orden:hover {
-  transform: scale(1.1);
+.lista .lista_orden:hover {
+  transform: scale(1.05);
 }
+
 /* BOTON MENU */
 .dropbtn {
   display: none;
@@ -265,7 +263,7 @@ header > .lista_orden {
   overflow: hidden;
   z-index: 1;
   color: #090909;
-  padding: 0.7em 3.3em 0.7em 1.7em;
+  padding: 0.5em 2.5em 0.5em 0.7em;
   font-size: 18px;
   border-radius: 0.5em;
   background: #e8e8e8;
@@ -355,6 +353,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 @media (max-width: 700px) {
+  /* carousel*/
   .carousel {
     margin-top: 20%;
     width: 90%;
@@ -365,6 +364,7 @@ body::-webkit-scrollbar-thumb {
     width: 50%;
     height: 30vh;
   }
+  /* productos containeres*/
 
   #productos-container {
     width: 50%;
@@ -385,10 +385,12 @@ body::-webkit-scrollbar-thumb {
   .tarjeta-producto {
     height: auto;
   }
+  /* LOGO*/
 
   .logo {
     display: none;
   }
+  /* BOTON WP*/
 
   .button2 {
     display: inline-block;
@@ -415,51 +417,56 @@ body::-webkit-scrollbar-thumb {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  /* HEADER*/
+
   #header {
-    width: 50%;
+    width: 100%;
+    padding: 5px;
   }
   .nav {
     display: none;
-    width: 100%;
     height: 100vh;
+    margin: auto;
   }
   .lista {
-    margin-top: 100px;
-    list-style: none;
     display: flex;
+    list-style: none;
     flex-direction: column;
-    justify-content: space-evenly;
     height: 50%;
+    justify-content: center;
     align-items: center;
   }
-
   .lista_orden {
-    display: flex;
-    margin: 0 10px;
-    transition: transform 0.3s ease-in-out;
+    padding: 10px 10px;
+    margin: 5px;
+    text-align: center;
+    list-style: none;
   }
   header > .lista_orden {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 95%;
+    margin-left: 80%;
+    margin-top: -11%;
   }
+
+  /* Boton menu*/
 
   .dropbtn {
     display: block;
     background-color: transparent;
-    width: 50px;
-    height: 50px;
-    font-size: 3rem;
+    font-size: 2.5rem;
     border: none;
     color: var(--main-color);
     margin: 0 20px;
     cursor: pointer;
   }
+  .dropbtn:active {
+    opacity: 0.5;
+  }
 
   .dropbtn i {
     color: var(--main-color);
   }
+
+  /* Econder totales delcart*/
 }
 .escondido {
   display: none;

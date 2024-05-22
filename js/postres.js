@@ -11,11 +11,13 @@ const postres = [
     name: "Porcion Chocolate",
     price: 1500,
     img: "img/20240110_113707.jpg",
+    description: "Deliciosa torta hecha con ingredieentes naturales",
   },
   {
     id: 3,
     name: "Torta Chocolate",
     price: 1000,
     img: "img/20240110_114219-removebg-preview.png",
+    description: "Deliciosa torta hecha con ingredieentes naturales",
   },
 ];
